@@ -101,3 +101,14 @@
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
 })();
+
+// CRO: botão flutuante aparece só quando o CTA da hero não está visível
+(function () {
+  var fab = document.querySelector('.wa-float');
+  var cta = document.querySelector('.hero__ctas');
+  if (!fab || !cta || !('IntersectionObserver' in window)) return;
+  fab.classList.add('is-hidden');
+  new IntersectionObserver(function (en) {
+    fab.classList.toggle('is-hidden', en[0].isIntersecting);
+  }).observe(cta);
+})();

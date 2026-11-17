@@ -299,3 +299,27 @@ html.motion .reveal.is-in{opacity:1;transform:none}
 /* Véu no topo para o logo não brigar com o letreiro da foto */
 .topo::before{content:"";position:absolute;inset:0 0 -40px;z-index:-1;background:linear-gradient(180deg,rgba(11,12,14,.85) 0%,rgba(11,12,14,.5) 55%,rgba(11,12,14,0) 100%);pointer-events:none;transition:opacity .3s}
 .topo.is-solid::before{opacity:0}
+
+/* ---------- CRO: hero ---------- */
+.hero h1{font-size:clamp(38px,4.4vw,66px)}
+.hero__micro{margin-top:14px;font-size:14px;color:rgba(255,255,255,.62)}
+.hero__rating{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:26px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background-color .2s}
+.hero__rating:hover{background:rgba(255,255,255,.1)}
+.hero__score{display:flex;align-items:center;gap:10px;font-size:14px}
+.hero__quote{font-size:15px;line-height:1.45}
+.hero__quote i{font-style:normal;color:rgba(255,255,255,.55);white-space:nowrap}
+@media (max-width:959px){
+  .hero__slides{height:44svh;min-height:300px}
+  .hero__txt{margin-top:-64px;padding-bottom:40px}
+  .hero h1{font-size:clamp(30px,8.6vw,40px)}
+  .hero .kicker{margin-bottom:10px}
+  .hero__lead{margin-top:14px;font-size:16px}
+  .hero__ctas{margin-top:20px}
+  .hero__main{flex:1 1 100%}
+  .hero__alt{display:none}
+  .hero__micro{text-align:center;width:100%;max-width:none}
+}
+/* Botão flutuante só aparece depois que o CTA da hero sai da tela */
+.wa-float{transition:transform .35s var(--ease-out),opacity .3s}
+.wa-float.is-hidden{opacity:0;transform:translateY(16px) scale(.9);pointer-events:none}
+html.motion .wa-float{animation:none}
