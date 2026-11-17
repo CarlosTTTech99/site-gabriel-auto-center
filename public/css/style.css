@@ -196,7 +196,7 @@ html.motion .hero__txt>*:nth-child(5){animation-delay:.32s}
 .vant b{font-size:18px;font-weight:750}
 .vant span{color:var(--muted);font-size:16px;margin-top:2px}
 .vantagens__img{margin:0;height:100%;min-height:480px;border-radius:var(--r);overflow:hidden;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%)}
-.vantagens__img img{width:100%;height:100%;object-fit:cover;filter:none}
+.vantagens__img img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
 @media (max-width:860px){.vantagens__grid{grid-template-columns:1fr}.vantagens__img{min-height:0;aspect-ratio:4/3;clip-path:none}}
 
 /* ---------- Passos ---------- */
